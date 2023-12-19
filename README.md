@@ -1,2 +1,2 @@
-# wort-ex
+# Wort-ex
 Real Time Chat App
