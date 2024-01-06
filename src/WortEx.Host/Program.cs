@@ -16,6 +16,7 @@ builder.Services.AddServerSideBlazor(c =>
     c.DisconnectedCircuitRetentionPeriod = TimeSpan.FromSeconds(30);
 });
 
+// Context
 builder.Services
     .AddWortExInfrastructure()
     .AddWortExApplication()
@@ -37,6 +38,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
+// Routing
 app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
