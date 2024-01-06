@@ -1,5 +1,7 @@
-using WortEx.Frontend.Components;
+using WortEx.Infrastructure;
 using MudBlazor.Services;
+using WortEx.Application;
+using WortEx.Frontend;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddMudServices();
+builder.Services.AddRazorPages(c => c.RootDirectory = "/");
+builder.Services.AddServerSideBlazor(c =>
+{
+    c.DisconnectedCircuitMaxRetained = 25;
+    c.DisconnectedCircuitRetentionPeriod = TimeSpan.FromSeconds(30);
+});
+
+builder.Services
+    .AddWortExInfrastructure()
+    .AddWortExApplication()
+    .AddWortExFrontend()
+    .AddMudServices();
 
 var app = builder.Build();
 
@@ -24,7 +37,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.UseRouting();
+app.MapRazorPages();
+app.MapControllers();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
 
 app.Run();

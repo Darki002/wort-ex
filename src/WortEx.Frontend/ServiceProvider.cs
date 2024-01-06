@@ -1,4 +1,6 @@
-﻿namespace WortEx.Frontend;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace WortEx.Frontend;
 
 public static class ServiceProvider
 {

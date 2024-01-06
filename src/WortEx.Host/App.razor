@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+@using WortEx.Frontend.Layouts
+
+<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="@(new[] { typeof(MainLayout).Assembly })">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+    </Found>
+    <NotFound>
+        <p>Sorry, we couldn't find this page UwU</p>
+    </NotFound>
+</Router>
