@@ -1,7 +1,24 @@
 ﻿@inherits LayoutComponentBase
+@using WortEx.Frontend.Layouts.Components
 
-<MudThemeProvider/>
+<MudThemeProvider Theme="Theme.DefaultTheme"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
-@Body
+<MudLayout>
+    <MudAppBar>
+        <MudGrid Justify="Justify.Center">
+            <MudItem>
+                <MudText Align="Align.Center" Typo="Typo.h5" Style="font-weight: bold" Color="Color.Default">Wort-Ex</MudText>
+            </MudItem>
+            <MudSpacer/>
+            <MudItem>
+                <NavBar/>
+            </MudItem>
+            <MudSpacer/>
+        </MudGrid>
+    </MudAppBar>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
