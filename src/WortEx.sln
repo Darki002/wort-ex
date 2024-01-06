@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WortEx.Infrastructure", "Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WortEx.Host", "WortEx.Host\WortEx.Host.csproj", "{F1B24104-9A15-4C7B-91FD-89B1212216AA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{94E725E4-C8AF-4013-B43F-A0FB92B2E3A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WortEx.Tests", "WortEx.Tests\WortEx.Tests.csproj", "{3A14EE8C-16B9-4070-93FF-83F3965D0FF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{F1B24104-9A15-4C7B-91FD-89B1212216AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B24104-9A15-4C7B-91FD-89B1212216AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B24104-9A15-4C7B-91FD-89B1212216AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A14EE8C-16B9-4070-93FF-83F3965D0FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A14EE8C-16B9-4070-93FF-83F3965D0FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A14EE8C-16B9-4070-93FF-83F3965D0FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A14EE8C-16B9-4070-93FF-83F3965D0FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A14EE8C-16B9-4070-93FF-83F3965D0FF2} = {94E725E4-C8AF-4013-B43F-A0FB92B2E3A8}
 	EndGlobalSection
 EndGlobal
