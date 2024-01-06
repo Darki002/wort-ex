@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WortEx.Infrastructure", "Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WortEx.Host", "WortEx.Host\WortEx.Host.csproj", "{F1B24104-9A15-4C7B-91FD-89B1212216AA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{94E725E4-C8AF-4013-B43F-A0FB92B2E3A8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94E725E4-C8AF-4013-B43F-A0FB92B2E3A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WortEx.Tests", "WortEx.Tests\WortEx.Tests.csproj", "{3A14EE8C-16B9-4070-93FF-83F3965D0FF2}"
 EndProject
