@@ -1,7 +1,19 @@
 # Architecture
 
-Onion Architecture
+![Architecture](./Architectur.png)
 
-- Frontend
-- Application
-- Infrastructur
+## Frontend
+
+- Website
+- API
+
+## Application
+
+- QueryHandler
+- CommandHandler
+- "Buissness" Logic
+
+## Infrastructur
+
+- Repositories
+- DB Connection
