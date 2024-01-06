@@ -1,24 +1,28 @@
 ﻿@inherits LayoutComponentBase
-@using WortEx.Frontend.Layouts.Components
 
 <MudThemeProvider Theme="Theme.DefaultTheme"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
 <MudLayout>
-    <MudAppBar>
-        <MudGrid Justify="Justify.Center">
-            <MudItem>
-                <MudText Align="Align.Center" Typo="Typo.h5" Style="font-weight: bold" Color="Color.Default">Wort-Ex</MudText>
-            </MudItem>
-            <MudSpacer/>
-            <MudItem>
-                <NavBar/>
-            </MudItem>
-            <MudSpacer/>
-        </MudGrid>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" OnClick="@ToggleDrawer" />
     </MudAppBar>
-    <MudMainContent>
+    <MudDrawer ClipMode="DrawerClipMode.Never" @bind-Open="drawerOpen" Elevation="1" Variant="@DrawerVariant.Responsive">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">Wort-Ex</MudText>
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <MudNavLink Href="/">Home</MudNavLink>
+            <MudNavGroup Title="Settings" Expanded="true">
+                <MudNavLink Href="/profile">Profile</MudNavLink>
+                <MudNavLink Href="/account">Account</MudNavLink>
+            </MudNavGroup>
+            <MudNavLink Href="/about">About</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+
+    <MudMainContent Class="pt-16 px-16">
         @Body
     </MudMainContent>
 </MudLayout>

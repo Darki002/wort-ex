@@ -8,8 +8,8 @@ public static class Theme
     
     private static MudTheme GetDefaultTheme()
     {
-        var primaryColor = "#643b96";
-        var darkColor = "#1a1a1a"; // You can customize this color for the dark background
+        var primaryColor = "#864acf";
+        var darkColor = "#242424"; // You can customize this color for the dark background
 
         var mudTheme = new MudTheme()
         {
